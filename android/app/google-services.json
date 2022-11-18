@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "782578299696",
+    "project_id": "telescope-8e7cf",
+    "storage_bucket": "telescope-8e7cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782578299696:android:022f3e7db43c50eb6c0ef5",
+        "android_client_info": {
+          "package_name": "com.example.mobile_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782578299696-4neevfui6u78l6d1sp8gpvvjocpgt4ds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTMIzvNWmbjBuY-HfJNhnR1KelZTJpbZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782578299696-4neevfui6u78l6d1sp8gpvvjocpgt4ds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
