@@ -1,8 +1,9 @@
+import 'package:commons/commons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_app/auth/login/bloc/login_bloc.dart';
-import 'package:mobile_app/startup/views/startup_page.dart';
 import 'package:mobile_app/welcome/bloc/welcome_bloc.dart';
+import 'auth/bloc/auth_bloc.dart';
 import 'launcherScreen/launcher_screen.dart';
 
 void main() {
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => WelcomeBloc()),
-        BlocProvider(create: (context) => LoginBloc())
+        BlocProvider(create: (context) => LoginBloc()),
+        BlocProvider(create: (context) => AuthBloc()),
+        BlocProvider(create: (context) => LoadingCubit()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

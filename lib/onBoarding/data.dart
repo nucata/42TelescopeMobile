@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 ///list of strings containing onBoarding titles
 final List<String> titlesList = [
-  'Flutter OnBoarding',
-  'Firebase Auth',
-  'Facebook Login',
-  'Instaflutter.com',
+  'Telescope OnBoarding',
+  'Connect with peers',
+  'Level up your coding skill',
+  'Learn and Teach from others',
   'Jump straight into the action',
 ];
 
 /// list of strings containing onBoarding subtitles, the small text under the
 /// title
 final List<String> subtitlesList = [
-  'Build your on-boarding flow in seconds',
-  'Use Firebase for user managements',
-  'Leverage Facebook to log in user easily',
-  'Get more awesome templates',
+  'From ur telescope you can see the start',
+  'See all the 42 Students at once',
+  'Learn new technologies while doing ur 42 path',
+  'Share your knowledge from people',
   'Get Started'
 ];
 
