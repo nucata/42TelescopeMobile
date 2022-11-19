@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
+
 const finishedOnBoardingConst = 'finishedOnBoarding';
-const colorPrimary = 0xFF4549BC;
+Color colorPrimary = const Color.fromARGB(255, 33, 157, 185);
 const usersCollection = 'users';
 const eula = '';

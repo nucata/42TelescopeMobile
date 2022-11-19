@@ -11,7 +11,7 @@ InputDecoration getInputDecoration(
     hintText: hint,
     focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(25.0),
-        borderSide: const BorderSide(color: Color(colorPrimary), width: 2.0)),
+        borderSide: BorderSide(color: colorPrimary, width: 2.0)),
     errorBorder: OutlineInputBorder(
       borderSide: BorderSide(color: errorColor),
       borderRadius: BorderRadius.circular(25.0),

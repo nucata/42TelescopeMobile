@@ -1,7 +1,8 @@
 library clubs;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'bloc/clubs_bloc.dart';
+export 'data/clubs.dart';
+export 'models/models.dart';
+export 'repository/repository.dart';
+export 'views/views.dart';
+export 'widgets/widgets.dart';

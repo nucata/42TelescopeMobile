@@ -10,6 +10,4 @@ class LoadingCubit extends Cubit<LoadingState> {
 
   showLoading(BuildContext context, String message, bool isDismissible) async =>
       await showProgress(context, message, isDismissible);
-
-  hideLoading() async => await hideProgress();
 }

@@ -2,21 +2,29 @@ name: clubs
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
+publish_to: none
 
 environment:
-  sdk: '>=2.18.4 <3.0.0'
+  sdk: '>=2.19.0-255.2.beta <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
-  bloc: ^8.1.0
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.1
+  json_annotation: ^4.7.0
+
+  commons: 
+    path: ../commons
+  master_detail:
+    path: ../master_detail
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  json_serializable: ^6.5.4
+  build_runner: ^2.3.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

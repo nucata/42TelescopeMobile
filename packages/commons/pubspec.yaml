@@ -13,12 +13,20 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.13.5
-  sn_progress_dialog: ^1.0.8
+  flutter_easyloading: ^3.0.5
+  json_annotation: ^4.7.0
+  
+  clubs:
+    path: ../clubs
+  profile:
+    path: ../profile
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  json_serializable: ^6.5.4
+  build_runner: ^2.3.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

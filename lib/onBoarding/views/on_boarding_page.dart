@@ -36,7 +36,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     return BlocProvider(
       create: (context) => OnBoardingCubit(),
       child: Scaffold(
-        backgroundColor: const Color(colorPrimary),
+        backgroundColor: colorPrimary,
         body: BlocBuilder<OnBoardingCubit, OnBoardingInitial>(
           builder: (context, state) {
             return Stack(

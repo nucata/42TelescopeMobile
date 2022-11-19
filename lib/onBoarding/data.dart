@@ -25,6 +25,6 @@ final List<dynamic> imageList = [
   Icons.developer_mode,
   Icons.layers,
   Icons.account_circle,
-  'assets/images/ic_launcher_round.png',
+  Icons.access_alarm,
   Icons.code
 ];

@@ -1,5 +1,7 @@
+import 'package:clubs/clubs.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:mobile_app/models/models.dart';
+
+import 'skill.dart';
 
 part 'user.g.dart';
 
@@ -8,11 +10,11 @@ class UserModel {
   String intraName;
   String id;
   String accessToken;
-  String profile;
+  String profilePic;
   String campusId;
   String level;
-  List<UserModel> skills;
-  List<Clubs> clubs;
+  List<Skill> skills;
+  List<Club> clubs;
 
   UserModel(
       {required this.skills,
@@ -22,7 +24,7 @@ class UserModel {
       required this.id,
       required this.intraName,
       required this.level,
-      required this.profile});
+      required this.profilePic});
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);

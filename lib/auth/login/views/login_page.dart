@@ -36,11 +36,9 @@ class _LoginPage extends State<LoginPage> {
             listeners: [
               BlocListener<AuthBloc, AuthState>(
                 listener: (context, state) async {
-                  await context.read<LoadingCubit>().hideLoading();
                   if (state.authState == AuthStateEnum.authenticated) {
                     if (!mounted) return;
-                    pushAndRemoveUntil(
-                        context, HomePage(userModel: state.user!), false);
+                    pushReplacement(context, const HomePage());
                   } else {
                     if (!mounted) return;
                     showSnackBar(context,
@@ -78,15 +76,15 @@ class _LoginPage extends State<LoginPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const Align(
+                        Align(
                           alignment: Alignment.centerLeft,
                           child: Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                                 top: 32.0, right: 16.0, left: 16.0),
                             child: Text(
                               'Sign In',
                               style: TextStyle(
-                                  color: Color(colorPrimary),
+                                  color: colorPrimary,
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -103,7 +101,7 @@ class _LoginPage extends State<LoginPage> {
                               },
                               style: const TextStyle(fontSize: 18.0),
                               keyboardType: TextInputType.emailAddress,
-                              cursorColor: const Color(colorPrimary),
+                              cursorColor: colorPrimary,
                               decoration: getInputDecoration(
                                   hint: 'IntraName',
                                   darkMode: isDarkMode(context),
@@ -124,7 +122,7 @@ class _LoginPage extends State<LoginPage> {
                                   .add(ValidateLoginFieldsEvent(_key)),
                               textInputAction: TextInputAction.done,
                               style: const TextStyle(fontSize: 18.0),
-                              cursorColor: const Color(colorPrimary),
+                              cursorColor: colorPrimary,
                               decoration: getInputDecoration(
                                   hint: 'Password',
                                   darkMode: isDarkMode(context),
@@ -138,11 +136,11 @@ class _LoginPage extends State<LoginPage> {
                               fixedSize: Size.fromWidth(
                                   MediaQuery.of(context).size.width / 1.5),
                               padding: const EdgeInsets.symmetric(vertical: 16),
-                              backgroundColor: const Color(colorPrimary),
+                              backgroundColor: colorPrimary,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25.0),
-                                side: const BorderSide(
-                                  color: Color(colorPrimary),
+                                side: BorderSide(
+                                  color: colorPrimary,
                                 ),
                               ),
                             ),
@@ -154,9 +152,12 @@ class _LoginPage extends State<LoginPage> {
                                 color: Colors.white,
                               ),
                             ),
-                            onPressed: () => context
-                                .read<LoginBloc>()
-                                .add(ValidateLoginFieldsEvent(_key)),
+                            onPressed: () {
+                              context
+                                  .read<LoginBloc>()
+                                  .add(ValidateLoginFieldsEvent(_key));
+                              push(context, const HomePage());
+                            },
                           ),
                         ),
                       ],

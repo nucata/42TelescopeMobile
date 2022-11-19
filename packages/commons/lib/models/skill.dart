@@ -6,8 +6,9 @@ part 'skill.g.dart';
 class Skill {
   String id;
   String name;
+  String rate;
 
-  Skill({required this.id, required this.name});
+  Skill({required this.id, required this.name, required this.rate});
 
   factory Skill.fromJson(Map<String, dynamic> json) => _$SkillFromJson(json);
 

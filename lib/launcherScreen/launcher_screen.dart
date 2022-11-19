@@ -25,7 +25,7 @@ class _LauncherScreenState extends State<LauncherScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(colorPrimary),
+      backgroundColor: colorPrimary,
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           switch (state.authState) {
@@ -39,17 +39,17 @@ class _LauncherScreenState extends State<LauncherScreen> {
                   ));
               break;
             case AuthStateEnum.authenticated:
-              pushReplacement(context, HomePage(userModel: state.user!));
+              pushReplacement(context, const HomePage());
               break;
             case AuthStateEnum.unauthenticated:
               pushReplacement(context, const WelcomePage());
               break;
           }
         },
-        child: const Center(
+        child: Center(
           child: CircularProgressIndicator.adaptive(
             backgroundColor: Colors.white,
-            valueColor: AlwaysStoppedAnimation(Color(colorPrimary)),
+            valueColor: AlwaysStoppedAnimation(colorPrimary),
           ),
         ),
       ),

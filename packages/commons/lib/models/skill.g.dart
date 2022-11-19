@@ -9,9 +9,11 @@ part of 'skill.dart';
 Skill _$SkillFromJson(Map<String, dynamic> json) => Skill(
       id: json['id'] as String,
       name: json['name'] as String,
+      rate: json['rate'] as String,
     );
 
 Map<String, dynamic> _$SkillToJson(Skill instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
+      'rate': instance.rate,
     };

@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => LoadingCubit()),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Telescope',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

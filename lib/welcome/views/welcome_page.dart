@@ -29,22 +29,22 @@ class WelcomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Center(
-                    child: Image.asset(
-                      'assets/images/welcome_image.png',
-                      width: 150.0,
-                      height: 150.0,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(
+                  // Center(
+                  //   child: Image.asset(
+                  //     'assets/images/welcome_image.png',
+                  //     width: 150.0,
+                  //     height: 150.0,
+                  //     fit: BoxFit.cover,
+                  //   ),
+                  // ),
+                  Padding(
+                    padding: const EdgeInsets.only(
                         left: 16, top: 32, right: 16, bottom: 8),
                     child: Text(
-                      'Say Hello To Your New App!',
+                      'Welcome to the App!',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: Color(colorPrimary),
+                          color: colorPrimary,
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold),
                     ),
@@ -52,7 +52,7 @@ class WelcomePage extends StatelessWidget {
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
                     child: Text(
-                      'You\'ve just saved a week of development and headaches.',
+                      "Let's saved a week of development and headaches.",
                       style: TextStyle(fontSize: 18),
                       textAlign: TextAlign.center,
                     ),
@@ -64,12 +64,12 @@ class WelcomePage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size.fromWidth(
                             MediaQuery.of(context).size.width / 1.5),
-                        backgroundColor: const Color(colorPrimary),
+                        backgroundColor: colorPrimary,
                         textStyle: const TextStyle(color: Colors.white),
                         padding: const EdgeInsets.only(top: 16, bottom: 16),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(25.0),
-                            side: const BorderSide(color: Color(colorPrimary))),
+                            side: BorderSide(color: colorPrimary)),
                       ),
                       child: const Text(
                         'Log In',
@@ -81,33 +81,33 @@ class WelcomePage extends StatelessWidget {
                       },
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        right: 40.0, left: 40.0, top: 20, bottom: 20),
-                    child: TextButton(
-                      onPressed: () {
-                        context.read<WelcomeBloc>().add(SignupPressed());
-                      },
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(top: 16, bottom: 16),
-                        fixedSize: Size.fromWidth(
-                            MediaQuery.of(context).size.width / 1.5),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25.0),
-                          side: const BorderSide(
-                            color: Color(colorPrimary),
-                          ),
-                        ),
-                      ),
-                      child: const Text(
-                        'Sign Up',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Color(colorPrimary)),
-                      ),
-                    ),
-                  )
+                  // Padding(
+                  //   padding: const EdgeInsets.only(
+                  //       right: 40.0, left: 40.0, top: 20, bottom: 20),
+                  //   child: TextButton(
+                  //     onPressed: () {
+                  //       context.read<WelcomeBloc>().add(SignupPressed());
+                  //     },
+                  //     style: TextButton.styleFrom(
+                  //       padding: const EdgeInsets.only(top: 16, bottom: 16),
+                  //       fixedSize: Size.fromWidth(
+                  //           MediaQuery.of(context).size.width / 1.5),
+                  //       shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(25.0),
+                  //         side: const BorderSide(
+                  //           color: colorPrimary,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //     child: const Text(
+                  //       'Sign Up',
+                  //       style: TextStyle(
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold,
+                  //           color: colorPrimary),
+                  //     ),
+                  //   ),
+                  // )
                 ],
               ),
             ),

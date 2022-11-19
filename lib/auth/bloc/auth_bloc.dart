@@ -3,7 +3,6 @@ import 'package:commons/commons.dart';
 import 'package:flutter/services.dart';
 import 'package:bloc/bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mobile_app/models/models.dart';
 
 import '../services/auth_service.dart';
 

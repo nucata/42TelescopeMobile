@@ -1,9 +1,10 @@
+import 'package:commons/commons.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_app/models/models.dart';
 
 class HomePage extends StatefulWidget {
-  final UserModel userModel;
-  const HomePage({super.key, required this.userModel});
+  const HomePage({
+    super.key,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -12,6 +13,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const BottomNavigationBarComp();
   }
 }
